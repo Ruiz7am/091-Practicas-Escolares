@@ -1,0 +1,11 @@
+@use './fonts';
+body {
+    display: grid;
+    grid-template-areas: 
+    "nav nav nav nav nav"
+    "header header header header header"
+    "main main main main aside"
+    "footer footer footer footer footer";
+    font-family: fonts.$regular-font;
+
+}

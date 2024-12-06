@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscalibre-Clone</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-ads"><p>EN HALLOWEEN, BUSCALIBRE CON DESCUENTOS DE LOCURA + ENVIO GRATIS Ver mas.</p></div>
+        <div class="nav-and-search-container">
+            <div class="navbar-login-cart-container">
+                <div class="navbar-logo">
+                    <nav class="main-navbar">
+                        <div class="main-navbar--stripes">
+                            <span class="stripe"></span>
+                            <span class="stripe"></span>
+                            <span class="stripe"></span>
+                        </div>
+                    </nav>
+                    <div class="logo-container">
+                        <a href="#"><span class="logo"></span></a>
+                    </div>
+                </div>
+                <div class="login-cart">
+                    <span class="login-cart-icon login-icon"></span>
+                    <span class="login-cart-icon cart-icon"><span class="cart-added-items">3</span></span>
+                </div>
+            </div>
+            <div class="header-and-search-container">
+                <div class="search-input-container">
+                    <input type="text" name="search" placeholder="Titulo, Autor o ISBN">
+                    <div class="search-input--magnifier-icon">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="book-info-container">
+            <h1>Ghost World: Mundo Fantasma</h1>
+            <p><span>Daniel Clowes</span> (Autor) · La Cupula · Tapa Blanda</p>
+            <div class="book-rating">
+                <span>Estrellas</span>
+                <span>3 opiniones</span>
+            </div>
+        </section>
+        <section class="book-front-cover">
+            <figure>
+                <img src="./assets/images/cover.webp" alt="cover"></img>
+            </figure>
+        </section>
+        <section class="book-cost-info">
+            <div>
+                <div class="book-type">
+                    <span>Libro Físico</span>
+                </div>
+            </div>
+            <div>
+                <div class="book-cost-section">
+                    <p>$ 386.64</p>
+                    <p>$ 773.28</p>
+                    <p>Ahorras: $ 386.64</p>
+                </div>
+                <div class="discount-card">
+                    <svg id="triangle-left"></svg>
+                    <div>
+                        <p><b>50%</b> descuento</p>
+                    </div>
+                </div>
+            </div>
+            <div class="book-buy-section">
+                <span>Cantidad</span>
+                <select name="quantity" id="quantity">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <p>Estado: <b>Nuevo</b></p>
+                <p>Quedan 3 unidades</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

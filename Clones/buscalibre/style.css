@@ -1,0 +1,313 @@
+:root {
+    --orange-1: #ff6100;
+    --orange-2: #ff9600;
+    --montserrat: 'Montserrat', sans-serif;
+    --header-backg: #182B3A;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    width: 100%;
+    height: 100%;
+    font-family: var(--montserrat);
+}
+
+
+/* HEADER --------------------------------*/
+/* Header Ads ----------------------------*/
+.header-ads {
+    width: 100%;
+    padding: 7px 32px;
+    text-align: center;
+    font-size: 1.664rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    color:white;
+    background: linear-gradient(45deg, var(--orange-1), var(--orange-2));
+}
+
+/* Main Header and Search -----------------*/
+.nav-and-search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--header-backg);
+    width: 100%;
+    height: 120px;
+    color: white;
+    padding: 8px 7px 0;
+    }
+.navbar-login-cart-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+    padding:0 7px 5px;
+}
+.navbar-logo {
+    display: flex;
+    gap: 15px;
+    width: 50%;
+}
+.main-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+}
+.main-navbar--stripes {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 25px;
+    
+}
+.main-navbar--stripes .stripe {
+    display: block;
+    width: 100%;
+    height: 2px;
+    max-height: 2px;
+    background-color: white;
+}
+.logo-container {
+    width: 100%;
+    height: 100%;
+}
+.logo-container .logo {
+    display: inline-block;
+    background-image: url(https://statics.cdn0.buscalibre.com/images/logos/20231208132739buscalibre.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 140px;
+    height: 60px;
+}
+.login-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.login-cart .login-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url('./assets/icons/logo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.login-cart .cart-icon {
+    width: 24px;
+    height: 24px;
+    background-image: url('./assets/icons/cart.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.login-cart .cart-icon .cart-added-items {
+    position: relative;
+    right: -12px;
+    top: -13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    color: #ff3c00;
+    background-color: var(--header-backg);
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.44rem;
+    font-weight: 500;
+}
+.header-and-search-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 10px;
+    padding-bottom: 10px;
+}
+.header-and-search-container .search-input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 95%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0 3px 0 7px;
+
+}
+.header-and-search-container input {
+    width: 85%;
+    height: 74%;
+    background-color: #efeff0;
+    border: currentColor;
+    border-radius: 9px;
+    padding: 10px;
+    color: black;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 400;
+}
+.header-and-search-container input ::placeholder {
+    color: black;
+    opacity: 1;
+} 
+
+.search-input--magnifier-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 100%;
+}
+.search-input--magnifier-icon span {
+    display: inline-block;
+    width: 40px;
+    height: 26px;
+    margin-left: 5px;
+    background-image: url('./assets/icons/magnifier.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.30;
+    border-left: 1px solid black;
+}
+.book-info-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.book-info-container h1 {
+    font-size: 2.08rem;
+    font-weight: 700;
+}
+.book-info-container p {
+    font-size: 2.24rem;
+    font-weight: 300;
+}
+.book-info-container p span {
+    color: rgb(255, 79, 0);
+}
+.book-rating span:nth-child(2) {
+    color: rgb(255, 79, 0);
+    font-size: 1.6rem;
+}
+.book-front-cover {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 12px;
+}
+.book-front-cover figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.book-front-cover img {
+    width:42%;
+}
+.book-cost-info {
+    width: 100%;
+    height: 100%;
+}
+.book-cost-info div:nth-child(2) {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.10);
+}
+.book-cost-info .book-type {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 5px 30px 8px 5px;
+    border-top: 1px solid rgb(0, 0, 0, 0.10);
+    border-right: 1px solid rgb(0, 0, 0, 0.10);
+    border-radius: 0 3px 0 0;
+    color: rgb(255, 90, 0);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.book-cost-info .book-cost-section {
+    display: inline-block;
+}
+.book-cost-info .book-cost-section p:nth-child(1) {
+    font-size: 3.04rem;
+    font-weight: 600;
+    margin: 10px 10px 15px 5px;
+}
+.book-cost-info .book-cost-section p:nth-child(2) {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0 0 0 5px;
+    color: rgb(102, 102, 102);
+}
+.book-cost-info .book-cost-section p:nth-child(3) {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: rgb(9, 130, 0);
+    margin: 5px 0 0 5px;
+}
+.book-cost-info .discount-card {
+    position:relative;
+    bottom: 69px;
+    display: inline-block;
+    height: 100%;
+
+}
+.book-cost-info .discount-card #triangle-left {
+    position: relative;
+    top: 14px;
+    left: 4px;
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-right: 13px solid rgb(255,96, 0);
+    border-bottom: 19px solid transparent;
+}
+.book-cost-info .discount-card div {
+    display: inline-block;
+    background-color: rgb(255,96, 0);
+    color: white;
+    padding: 9px;
+}
+.book-buy-section {
+    margin-top: 15px;
+    width: 100%;
+    padding: 0 10px 15px;
+}
+.book-buy-section span {
+    font-size: 1.36rem;
+    margin-right: 10px;
+}
+.book-buy-section select {
+    margin-right: 3px;
+}
+.book-buy-section p:nth-child(3) {
+    display: inline-block;
+    margin-left: 3px;
+    font-size: 1.36rem;
+}
+.book-buy-section p:nth-child(4) {
+    margin-top: 13px;
+    font-size: 1.36rem;
+    color: rgb(9, 130, 0);
+}
+.book-buy-section button {
+    display: block;
+    width: 292px;
+    height: 50px;
+    margin: 10px auto;
+    background-color: rgb(255, 60, 0);
+    color: white;
+    font-size: 1.92rem;
+    border-radius: 5px;
+}

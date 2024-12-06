@@ -1,0 +1,54 @@
+@use 'colors';
+@use 'fonts';
+@import 'breakpoints';
+
+.index-body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.index-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.index-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60%;
+    margin: 70px auto 20px;
+    &__section-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 60%;
+        height: fit-content;
+        border-radius: 14px;
+        background: #111e21;
+        box-shadow:  8px 8px 16px #0d1719,
+                    -8px -8px 16px #152629;
+    }
+    &__section-title {
+        font-family: fonts.$secondary-font;
+        font-size: fonts.$font-sub-header;
+        font-weight: 300;
+        letter-spacing: 0.3rem;
+        color: colors.$primary-color;
+        text-align: center;
+        padding: 20px;
+        @include sm {
+            font-size: fonts.$font-header-3;
+            padding: 10px;
+        }
+        @include lg {
+            font-size: fonts.$font-main-header-big;
+        }
+    }
+}       

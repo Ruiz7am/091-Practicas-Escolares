@@ -1,0 +1,94 @@
+@use "colors";
+@use "fonts";
+@import "breakpoints";
+
+
+// Card de las entradas del blog
+.blog-entry-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  width: 100%;
+  @include lg {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+  &__image-container {
+    width: 128px;
+    height: 128px;
+    @include lg {
+      width: 100%;
+    }
+  }
+  &__image {
+    width: 128px;
+    height: 128px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 5px 5px 15px #0e1a1c, -5px -5px 15px #142326;
+    @include lg {
+      width: 100%;
+    }
+  }
+  &__title-container {
+    padding-left: 20px;
+    @include lg {
+      padding: 0;
+    }
+  }
+  &__title {
+    font-family: fonts.$primary-font;
+    letter-spacing: 0.3rem;
+    font-size: fonts.$font-header-2;
+    font-weight: 400;
+    text-align: right;
+    color: colors.$primary-color;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    @include sm {
+      font-size: fonts.$font-header-3;
+    }
+  }
+  &__content {
+    text-align: right;
+    color: colors.$secondary-color;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    @include sm {
+      -webkit-line-clamp: 2;
+      font-size: fonts.$font-common-text-small;
+    }
+  }
+}
+
+// Sección del Post
+.section__subtitle {
+  color: colors.$secondary-color;
+  z-index: 2;
+  padding: 0 5px;
+  width: 100%;
+}
+
+.section__image {
+  border-radius: 16px;
+  box-shadow: 
+  35px 35px 70px #0b1416, 
+  -35px -35px 70px #17282c;
+  width: 100%;
+}
+
+.section__content {
+  color: colors.$secondary-color;
+  padding: 0 5px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 150%;
+}
+

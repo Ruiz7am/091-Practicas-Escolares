@@ -1,0 +1,73 @@
+@use './fonts';
+@use './colors';
+@import './breakpoints';
+
+.index-header {
+    flex-direction: column;
+    justify-content: center;
+    height: 275px;
+    padding-top: 100px;
+    border-radius: 0 0 30px 30px;
+    @include sm {
+        height: 220px;
+        padding-top: 65px;   
+    }
+    @include lg {
+        flex-direction: row;
+        padding-top: 0;
+        justify-content: space-evenly;
+    }
+    &__title-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }    
+    &__title{
+            font-size: fonts.$font-main-header;
+            font-family: fonts.$primary-font;
+            font-weight: 400;
+            color: colors.$main-color;
+            @include sm {
+                font-size: fonts.$font-sub-header;
+            }
+            @include lg {
+                font-size: fonts.$font-main-header-big;
+            }
+    }
+    &__subtitle {
+        font-size: fonts.$font-header-2;
+        font-family: fonts.$secondary-font;
+        font-weight: 200;
+        @include sm {
+            font-size: fonts.$font-header-3;
+        }
+        @include lg {
+            font-size: fonts.$font-index-menu;
+        }
+    }
+    &__profile-image-container {
+        width: 190px;
+        height: 190px;
+        position: relative;
+        top: 47px;
+        @include sm {
+            width: 140px;
+            height: 140px;
+            top: 40px;
+        }
+        @include lg {
+            position: static;
+        }
+    }
+    &__profile-image {
+        width: 190px;
+        height: 190px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0px 5px 12px 3px #020e10;
+        @include sm {
+            width: 140px;
+            height: 140px;
+        }
+    }
+} 
