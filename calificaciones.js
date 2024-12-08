@@ -1,12 +1,17 @@
+// faker api
+import { faker } from '@faker-js/faker';
 // Supongamos que esta variable son las calificaciones de los alumnos de una universidad.
 // En donde se califica del 0 al 100 con valores decimales que, dependiendo de los decimales que sean, se redondea o se truncan, poniendo a varios estudiantes en la delgada linea que divide la felicidad y la desgracia.
 
 const boton = document.querySelector('.boton');
 const paragraph = document.querySelector('.calificacion');
 const resultados = document.getElementsByTagName('span');
+const nombre = document.getElementById('nombre');
 
 boton.addEventListener('click', (event) => {
-    
+    let randomName = faker.person.fullName();
+    nombre.innerHTML = `${randomName}`;
+    nombre.style.color = 'blue';
     let calificacion = (Math.random() * 100).toFixed(3);
     let acreditacion = 'no data';
     let decimales = parseInt(calificacion.toString().split('.')[1]);
@@ -22,10 +27,10 @@ boton.addEventListener('click', (event) => {
 
 function redondearOTruncarCalificacion(decimales, calificacion, acreditacion) {
     if (decimales < 600){
-        calificacion2 = Math.floor(calificacion);
+        let calificacion2 = Math.floor(calificacion);
         mensaje(calificacion, calificacion2, acreditacion)
     } else if (decimales > 600) {
-        calificacion2 = Math.round(calificacion)
+        let calificacion2 = Math.round(calificacion)
         mensaje(calificacion, calificacion2, acreditacion)
     }
 }

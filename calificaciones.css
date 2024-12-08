@@ -29,7 +29,10 @@ body {
     background-color: rgb(246, 242, 237);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
+h1{
+    font-size: 1.8rem;
+    text-align: center;
+}
 p {
     text-align: center;
     line-height: 30px;
@@ -45,4 +48,7 @@ span {
 }
 .no-acreditado {
     color: red;
+}
+.nombre {
+    color: blue;
 }
