@@ -1,13 +1,16 @@
-// faker api
-import { faker } from '@faker-js/faker';
+// faker api:
+// to get random students names
+const { faker } = await import('https://esm.sh/@faker-js/faker');
 // Supongamos que esta variable son las calificaciones de los alumnos de una universidad.
 // En donde se califica del 0 al 100 con valores decimales que, dependiendo de los decimales que sean, se redondea o se truncan, poniendo a varios estudiantes en la delgada linea que divide la felicidad y la desgracia.
 
+// Constants of elements will be dynamic
 const boton = document.querySelector('.boton');
 const paragraph = document.querySelector('.calificacion');
 const resultados = document.getElementsByTagName('span');
 const nombre = document.getElementById('nombre');
 
+// Click Event for initiate the program
 boton.addEventListener('click', (event) => {
     let randomName = faker.person.fullName();
     nombre.innerHTML = `${randomName}`;
@@ -25,6 +28,7 @@ boton.addEventListener('click', (event) => {
     }
 });
 
+// Round or truncate
 function redondearOTruncarCalificacion(decimales, calificacion, acreditacion) {
     if (decimales < 600){
         let calificacion2 = Math.floor(calificacion);
@@ -35,6 +39,7 @@ function redondearOTruncarCalificacion(decimales, calificacion, acreditacion) {
     }
 }
 
+// Mensaje 
 function mensaje(calificacion, calificacion2, acreditacion){
     paragraph.innerHTML = `Tu puntuacion es de: <span class="decimal">${calificacion}</span> Tu calificación es de: <span class="integer">${calificacion2}</span> Resultado: <span class="result">${acreditacion}</span>`;
     if (acreditacion === 'Acreditado'){
