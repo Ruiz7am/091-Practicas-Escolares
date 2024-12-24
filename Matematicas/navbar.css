@@ -1,0 +1,48 @@
+/* 
+
+Hello friend... hello friend?...
+anyway...
+
+*/
+
+/* VARIABLES */
+:root {
+
+    /* THE NAVBAR SETTINGS */
+    /* Here are all configurations for the component itself */
+    /* LAYOUT */
+    --Display: flex;
+    --Align-Items: flex-end;
+    --Justify-Content: space-evenly;
+    --Gap: 20px;
+
+    /* BOX MODEL */
+    --Width: 100%;
+    --Height: auto;
+    --Margin: ;
+    --Padding: ;
+
+    /* FONT SETTINGS */
+    --Font-Family: 'Roboto Flex', sans-serif;
+    --Font-Color: black;
+}
+/* RESET SETTINGS */
+
+#theNavbar {
+    /* layout */
+    display: var(--Display);
+    align-items: var(--Align-Items);
+    justify-content: var(--Justify-Content);
+    gap: var(--Gap);
+
+    /* box model */
+    width: var(--Width);
+    height: var(--Height);
+    margin: var(--Margin);
+    padding: var(--Padding);
+    /* font settings */
+    font-family: var(--Font-Family);
+}
+
+
+/* THE APP: CUADRADO BINOMIO */

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemáticas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        html {
+            font-size: 62.5%;
+            box-sizing: border-box;
+        }
+        body {
+            font-size: 1.6rem;
+            color: black;
+        }
+        h1 {
+            text-align: center;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+
+    ...It's a slippery slope...
+
+    -->
+    <header>
+        <h1>Matematicas en JavaScript</h1>
+        <the-navbar></the-navbar>
+    </header>
+    <section>
+        <the-app>
+            <h1>Algebra Basica</h1>
+            <h2>Cuadrado de Binomio</h2>
+            <p>Corresponde a la expresión (x + y)^2 o (x - y)^2</p>
+            <form id="theForm">
+                <label for="xValue"></label>
+                <input type="number" id="xValue">
+                <button id="addition">+</button>
+                <button id="subtraction">-</button>
+                <label for="yValue"></label>
+                <input type="number" id="yValue">
+            </form>
+        </the-app>
+    </section>
+    <script src="./app.js">
+        <!--  -->
+    </script>
+</body>
+</html>
