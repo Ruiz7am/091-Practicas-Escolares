@@ -4,45 +4,47 @@ Hello friend... hello friend?...
 anyway...
 
 */
-
-/* VARIABLES */
 :root {
 
-    /* THE NAVBAR SETTINGS */
-    /* Here are all configurations for the component itself */
-    /* LAYOUT */
-    --Display: flex;
-    --Align-Items: flex-end;
-    --Justify-Content: space-evenly;
-    --Gap: 20px;
+    /* --> THE NAVBAR SETTINGS */
+        /* Here are all configurations for the component itself */
+        /* LAYOUT */
+        --Navbar-Display: flex;
+        --Navbar-Align-Items: flex-end;
+        --Navbar-Justify-Content: space-evenly;
+        --Navbar-Gap: 50px;
 
-    /* BOX MODEL */
-    --Width: 100%;
-    --Height: auto;
-    --Margin: ;
-    --Padding: ;
+        /* BOX MODEL */
+        --Navbar-Width: 100%;
+        --Navbar-Height: auto;
+        --Navbar-Margin: ;
+        --Navbar-Padding: ;
+        --Navbar-border: ;
+        --Navbar-border-radius: ;
 
-    /* FONT SETTINGS */
-    --Font-Family: 'Roboto Flex', sans-serif;
-    --Font-Color: black;
+        /* FONT SETTINGS */
+        --Navbar-Font-Family: 'Roboto Flex', sans-serif;
+        --Navbar-Font-Color: black;
+
+        /* BACKGROUND SETTINGS */
+    /* <-- */
 }
-/* RESET SETTINGS */
 
-#theNavbar {
-    /* layout */
+/* 
+#the-navbar {
+    /* layout 
     display: var(--Display);
     align-items: var(--Align-Items);
     justify-content: var(--Justify-Content);
     gap: var(--Gap);
 
-    /* box model */
+    /* box model 
     width: var(--Width);
     height: var(--Height);
     margin: var(--Margin);
     padding: var(--Padding);
-    /* font settings */
+    /* font settings 
     font-family: var(--Font-Family);
-}
+} */
 
 
-/* THE APP: CUADRADO BINOMIO */

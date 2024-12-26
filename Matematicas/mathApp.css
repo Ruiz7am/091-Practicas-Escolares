@@ -1,0 +1,7 @@
+:root {
+    --MathApp-Display: flex;
+    --MathApp-Flex-Direction: column;
+    --MathApp-Width: 100%;
+    --MathApp-General-Font-Family: "Roboto Flex", serif;
+}
+
