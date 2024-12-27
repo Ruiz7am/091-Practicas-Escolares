@@ -107,6 +107,7 @@ class MathApp extends HTMLElement {
         mathAppArticle.appendChild(binomioCuadrado);
         binomioCuadrado.innerHTML = `
             <h4>Cuadrado de Binomio</h4>
+            <p>(x + y)² = x² + 2xy + y²</p>
             <form id="binomio-cuadrado-form">
                 <div>
                     <label for="binomio-cuadrado-a">a</label>
@@ -125,6 +126,9 @@ class MathApp extends HTMLElement {
                     font-size: 2.2rem;
                     text-align: center;
                 }
+                p {
+                    text-align: center;
+                }
                 #binomio-cuadrado-form {
                     display: flex;
                     flex-direction: column;
@@ -136,14 +140,29 @@ class MathApp extends HTMLElement {
                 }
             </style>
         `
+
     }
-    attachScript(){
-        this.shadowRoot.getElementById('')
+    addListenerScript(){
+        const formulario = this.shadowRoot.getElementById('binomio-cuadrado-form');
+        formulario.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const letterA = this.shadowRoot.getElementById('binomio-cuadrado-a').value;
+            const letterB = this.shadowRoot.getElementById('binomio-cuadrado-b').value;
+            const mathAppArticle = this.shadowRoot.getElementById('math-app');
+            const binomioCuadrado = document.createElement('div');
+            binomioCuadrado.id = 'binomio-cuadrado'
+            mathAppArticle.appendChild(binomioCuadrado)
+            binomioCuadrado.innerHTML = `
+                (${letterA}+${letterB})² = ${letterA}² + 2${letterA}${letterB} + ${letterB}
+            `
+            return binomioCuadrado;
+        })
     }
     render(){
         document.head.appendChild(this.putVariables());
         this.shadowRoot.appendChild(this.getTemplate().content.cloneNode(true));
         this.formulaLauncher();
+        this.addListenerScript();
 
     }
     connectedCallback(){
