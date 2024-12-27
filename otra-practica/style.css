@@ -1,0 +1,32 @@
+
+        /* VARIABLES */
+        :root {
+
+            /* Navbar Settings */
+            /* Styles applied directly to the ul tag */
+            /* Put id here */
+            /* layout */
+            --Display: flex;
+            --Flex-Direction: auto;
+            --Align-Items: flex-end;
+            --Justify-Content: space-between;
+            --Gap: 20px;
+            /* box model */
+            --Width: 100%;
+            --Height: auto;
+            --Padding: 0;
+            --Margin: 0;
+            /*  */ 
+        }
+        
+        #aNavbar {
+            display: var(--Display);
+            /* flex-direction: var(--Flex-Direction); */
+            align-items: var(--Align-Items);
+            justify-content: var(--Justify-Content);
+            gap: var(--Gap);
+            width: var(--Width);
+            height: var(--Height);
+            padding: var(--Padding);
+            margin: var(--Margin);
+        }
