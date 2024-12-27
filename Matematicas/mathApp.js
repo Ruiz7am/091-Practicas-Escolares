@@ -102,10 +102,10 @@ class MathApp extends HTMLElement {
     }
     binomioCuadrado(){
         const mathAppArticle = this.shadowRoot.getElementById('math-app');
-        const binomioCuadrado = document.createElement('div');
-        binomioCuadrado.id = 'algebra-binomio-cuadrado';
-        mathAppArticle.appendChild(binomioCuadrado);
-        binomioCuadrado.innerHTML = `
+        const algebraBinomioCuadrado = document.createElement('div');
+        algebraBinomioCuadrado.id = 'algebra-binomio-cuadrado';
+        mathAppArticle.appendChild(algebraBinomioCuadrado);
+        algebraBinomioCuadrado.innerHTML = `
             <h4>Cuadrado de Binomio</h4>
             <p>(x + y)² = x² + 2xy + y²</p>
             <form id="binomio-cuadrado-form">
@@ -162,7 +162,6 @@ class MathApp extends HTMLElement {
         document.head.appendChild(this.putVariables());
         this.shadowRoot.appendChild(this.getTemplate().content.cloneNode(true));
         this.formulaLauncher();
-        this.addListenerScript();
 
     }
     connectedCallback(){
