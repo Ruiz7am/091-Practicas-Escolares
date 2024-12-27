@@ -24,7 +24,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 50px;
+    margin: 0 40px;
+    border-bottom: solid 1px black;
 }
 
 section {
@@ -32,6 +33,7 @@ section {
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-top: 36px;
 }
 
 math-app {

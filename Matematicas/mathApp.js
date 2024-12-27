@@ -8,7 +8,7 @@ class MathApp extends HTMLElement {
         mathApp.innerHTML = `
             <article id="math-app">
                 <h1>MathApp</h1>
-                <h2>Aplicacón de formulas basicas de Matematicas</h2>
+                <h2>Aplicación de Formulas Básicas de Matemáticas</h2>
                 <h3>Indice</h3>
                 <ol id="math-app__index">
                     <li>Formulas de Algebra</li>
@@ -104,6 +104,7 @@ class MathApp extends HTMLElement {
         const mathAppArticle = this.shadowRoot.getElementById('math-app');
         const algebraBinomioCuadrado = document.createElement('div');
         algebraBinomioCuadrado.id = 'algebra-binomio-cuadrado';
+        algebraBinomioCuadrado.classList.add('')
         mathAppArticle.appendChild(algebraBinomioCuadrado);
         algebraBinomioCuadrado.innerHTML = `
             <h4>Cuadrado de Binomio</h4>
@@ -140,7 +141,7 @@ class MathApp extends HTMLElement {
                 }
             </style>
         `
-
+        this.addListenerScript()
     }
     addListenerScript(){
         const formulario = this.shadowRoot.getElementById('binomio-cuadrado-form');
@@ -153,7 +154,7 @@ class MathApp extends HTMLElement {
             binomioCuadrado.id = 'binomio-cuadrado'
             mathAppArticle.appendChild(binomioCuadrado)
             binomioCuadrado.innerHTML = `
-                (${letterA}+${letterB})² = ${letterA}² + 2${letterA}${letterB} + ${letterB}
+                (${letterA}+${letterB})² = ${letterA}² + 2(${letterA})(${letterB}) + ${letterB}²
             `
             return binomioCuadrado;
         })
