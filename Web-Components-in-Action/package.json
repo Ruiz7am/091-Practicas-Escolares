@@ -1,0 +1,14 @@
+{
+  "name": "web-components-in-action",
+  "version": "1.0.0",
+  "description": "Practices from Book: Web Components in Action!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web-components"
+  ],
+  "author": "ArmandoRuiz [@ruiz7am] <riuz7am@outlook.com>",
+  "license": "MIT"
+}
