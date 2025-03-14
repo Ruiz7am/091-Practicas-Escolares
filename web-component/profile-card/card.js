@@ -30,7 +30,7 @@ class TheCard extends HTMLElement {
       </div>
       <p class="card__mini-bio">Hi, I'm Armando from Mx. I'm 35yo and I've been studying and practicing frontend web development for about six months. I've been improving my skills in HTML, CSS and JavaScript, focusing on good practices and the importance of a design system.</p>
       <div class="card__social-media-container">
-        <span><a href="#">Site</a></span>
+        <span><a href="https://ruiz7am.github.io/ruizam/">WebSite</a></span>
         <span><a href="#">Github</a></span>
         <span><a href="#">Twitter</a></span>
       </div>
@@ -51,6 +51,7 @@ class TheCard extends HTMLElement {
         padding: 30px;
         border: solid 1px rgb(from #000 r g b / 0.20);
         border-radius: 20px;
+        background-color: #e7e7e7;
         box-shadow: 1px 1px 5px 1px rgb(from #000 r g b / 0.12), -1px -1px 5px 1px rgb(from #000 r g b / 0.12);
       }
       * {
@@ -119,6 +120,9 @@ class TheCard extends HTMLElement {
         font-size: 1.3rem;
         cursor: pointer;
         box-shadow: 0.5px 0.5px 2px 0.5px rgb(from #000 r g b / 0.1);
+      }
+      span:hover {
+        transform: scale(1.03);
       }
     `;
     return styles;
