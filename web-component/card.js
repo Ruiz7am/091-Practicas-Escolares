@@ -47,6 +47,7 @@ class TheCard extends HTMLElement {
         align-items: center;
         gap: 25px;
         max-width: 400px;
+        height: auto;
         padding: 30px;
         border: solid 1px rgb(from #000 r g b / 0.20);
         border-radius: 20px;
@@ -93,22 +94,25 @@ class TheCard extends HTMLElement {
         font-size: 1.3rem;
         line-height: 1.6;
         letter-spacing: 0.2px;
+        will-change: visibility;
         visibility: hidden;
         overflow: hidden;
         box-sizing: border-box;
-        transition: all 500ms ease-out;
+        transition: width 500ms, height 500ms, visibility 500ms;
       }
       .card__social-media-container {
         display: flex;
-        gap: 5%;
+        flex-wrap: wrap;
         width: 0px;
         height: 0px;
         padding: 0;
+        will-change: visibility;
         visibility: hidden;
         overflow: hidden;
         box-sizing: border-box;
       }
       span {
+        margin: 5px;
         padding: 3px 10px;
         border: 1px solid rgb(from #000 r g b / 0.1);
         border-radius: 4px;
@@ -136,10 +140,10 @@ class TheCard extends HTMLElement {
 
     host.addEventListener('mouseenter', () => {
       miniBio.style.visibility = 'visible';
-      miniBio.style.width = 'auto';
+      miniBio.style.width = 'fit-content';
       miniBio.style.height = 'auto';
       socialMediaContainer.style.visibility = 'visible';
-      socialMediaContainer.style.width = 'auto';
+      socialMediaContainer.style.width = '100%';
       socialMediaContainer.style.height = 'auto';
     });
     host.addEventListener('mouseleave', () => {
