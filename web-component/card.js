@@ -1,6 +1,5 @@
 // Card
-class 
-TheCard extends HTMLElement {
+class TheCard extends HTMLElement {
   constructor(){
     super();
     this.attachShadow({mode: 'open'});
@@ -23,7 +22,7 @@ TheCard extends HTMLElement {
     const theCard = document.createElement('template');
     theCard.innerHTML = `
       <figure class="card__avatar-container">
-        <img src="./avatar.png" alt="avatar">
+        <img src="./avatar.png" alt="avatar" class="card__avatar">
       </figure>
       <div class="card__name-container">
         <h2 class="card__name">Armando Ruiz</h2>
@@ -47,8 +46,7 @@ TheCard extends HTMLElement {
         flex-wrap: wrap;
         align-items: center;
         gap: 25px;
-        min-width: 250px;
-        max-width: 500px;
+        max-width: 400px;
         padding: 30px;
         border: solid 1px rgb(from #000 r g b / 0.20);
         border-radius: 20px;
@@ -66,16 +64,20 @@ TheCard extends HTMLElement {
         width: 65px;
         height: 55px;
       }
-      .card__avatar-container img {
+
+      .card__avatar-container:hover .card__avatar {
+        transform: scale(1.03);
+      }
+
+      .card__avatar-container .card__avatar {
         width: 100%;
         border: solid 1px rgb(from #000 r g b / 0.10);  
         border-radius: 50%;
-        box-shadow: 1px 1px 5px 1px rgb(from #000 r g b / 0.12), -1px -1px 3px 1px rgb(from #000 r g b / 0.12);
+        box-shadow: 0.5px 0.5px 4px 0.5px rgb(from #000 r g b / 0.12);
       }
       .card__name-container { 
         display: flex;
-        flex-direction: column;
-        align-items: 
+        flex-direction: column; 
       }
       h2 {
         font-size: 1.9rem;
@@ -83,25 +85,72 @@ TheCard extends HTMLElement {
       h3 {
         font-size: 1.6rem;
       }
-      p {
+      .card__mini-bio {
+        display: block;
+        width: 0px;
+        height: 0px;
+        padding: .1px;
         font-size: 1.3rem;
+        line-height: 1.6;
+        letter-spacing: 0.2px;
+        visibility: hidden;
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all 500ms ease-out;
       }
       .card__social-media-container {
         display: flex;
-        gap: 20px;
+        gap: 5%;
+        width: 0px;
+        height: 0px;
+        padding: 0;
+        visibility: hidden;
+        overflow: hidden;
+        box-sizing: border-box;
       }
       span {
+        padding: 3px 10px;
+        border: 1px solid rgb(from #000 r g b / 0.1);
+        border-radius: 4px;
         font-size: 1.3rem;
-      }
-      span:hover a {
         cursor: pointer;
+        box-shadow: 0.5px 0.5px 2px 0.5px rgb(from #000 r g b / 0.1);
       }
     `;
     return styles;
   }
 
-  getScript(){
+  script(){
+    console.group();
+    console.log("SCRIPT DEBUGGING");
+    const host = document.querySelector('the-card');
+    const width = host.clientWidth;
+    const height = host.clientHeight;
+    console.log(`El host del componente es: ${host}`);
+    console.log(host)
+    console.log(`Su tamaño es de W:${width}px X H:${height}px`);
+    const miniBio = host.shadowRoot.querySelector('.card__mini-bio');
+    const socialMediaContainer = host.shadowRoot.querySelector('.card__social-media-container');
+    console.log(socialMediaContainer);
+    console.log(miniBio);
 
+    host.addEventListener('mouseenter', () => {
+      miniBio.style.visibility = 'visible';
+      miniBio.style.width = 'auto';
+      miniBio.style.height = 'auto';
+      socialMediaContainer.style.visibility = 'visible';
+      socialMediaContainer.style.width = 'auto';
+      socialMediaContainer.style.height = 'auto';
+    });
+    host.addEventListener('mouseleave', () => {
+      miniBio.style.visibility = 'hidden';
+      miniBio.style.width = '0px';
+      miniBio.style.height = '0px';
+      socialMediaContainer.style.visibility = 'hidden';
+      socialMediaContainer.style.width = '0px';
+      socialMediaContainer.style.height = '0px';
+    })
+    console.groupEnd();
   }
 
   render(){
@@ -110,7 +159,8 @@ TheCard extends HTMLElement {
   }
 
   connectedCallback(){
-    this.render()
+    this.render();
+    this.script();
   }
 }
 
