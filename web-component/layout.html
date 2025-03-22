@@ -16,9 +16,71 @@
       padding: 100px;
       background-color: #cfcfcf;
     }
+
+
+        .movie-container {
+          position: relative;
+      width: 18%;
+      margin-block-end: 2.5%;
+      cursor: pointer;
+    }
+
+    .movie-img {
+      width: 100%;
+      filter: brightness(0.22);
+    }
+    /* .movie-img:hover {
+      filter: brightness(0.25);
+      transition: filter 500ms;
+    } */
+
+    .movie-details-container {
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 3%;
+      width: 100%;
+      height: 100%;
+      padding: 0 9%;
+      color: white;
+    }
+
+    .movie-title {
+      font-size: 3rem;
+    }
+
+    .movie-year,
+    .movie-rate, 
+    .movie-votes, 
+    .movie-popularity {
+      font-size: 1.85rem;
+      font-weight: 700;
+    }
+
+    .moreDetails-btn {
+      width: 40%;
+      height: 36px;
+    }
+
+    .inactive {
+      display: none;
+    }
   </style>
 </head>
 <body>
-
+  <div class="movie-container">
+    <img src="https://image.tmdb.org/t/p/w300/jRdxyW5ZmhD3ycStlb7gwOewTuE.jpg" alt="test" class="movie-img">
+    <div class="movie-details-container">
+      <h3 class="movie-title">The electric state</h3>
+      <span class="movie-year">Release date: 2025</span>
+      <span class="movie-rate">Rate: 6.7</span>
+      <span class="movie-votes">Votes: 800</span>
+      <span class="movie-popularity">Popularity: 10.2</span>
+      <button class="moreDetails-btn">More details</button>
+    </div>
+  </div>
 </body>
 </html>
